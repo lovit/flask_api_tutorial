@@ -6,16 +6,14 @@ REpresentational State Transfer (REST) API 의 약어로, Uniform Resource Ident
 보통 Uniform Resource Locator (URL) 은 자원의 위치를 나타내지만, URI 는 그 안에 데이터 정보가 포함된다.
 자원의 위치도 데이터 정보이기 때문에 URI 가 URL 을 포함하는 더 큰 단위의 개념이다.
 
-
-
 `GET` 은 URI 에 패러매터를 추가하여 요청하는 방식으로, query string 에 그 값을 추가한다.
 `https://127.0.0.1:5000/test?name=lovit&koname=%EA%B9%80%ED%98%84%EC%A4%91'` 에서 `?` 뒤의 부분이 query string 이다.
 마치 데이터베이스에서 어떤 값을 조회하기 위한 attributes 를 입력하는 구조인데, 이는 `GET` 이 서버로부터 값을 조회하기 위해 만들어졌기 때문이다.
 
-또한 URL 은 ASCII 로만 기술할 수 있으며, ASCII 에 포함되지 않는 언어와 특수문자를 표현하기 위해 URL Encoding 을 이용한다.
-즉 non-ASCII 글자들을 적절히 변형해야 하는데, `%EA` 처럼 `%` 다음의 16진수로 이 값들을 나타낸다.
-
 ## URL encoding
+
+URL 은 ASCII 로만 기술할 수 있으며, ASCII 에 포함되지 않는 언어와 특수문자를 표현하기 위해 URL Encoding 을 이용한다.
+즉 non-ASCII 글자들을 적절히 변형해야 하는데, `%EA` 처럼 `%` 다음의 16진수로 이 값들을 나타낸다.
 
 ```python
 import urllib.parse
