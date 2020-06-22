@@ -263,7 +263,7 @@ print(response.text.strip())      # {"concatenated_name":"lovit (\uae40\ud604\uc
 print(json.loads(response.text))  # {'concatenated_name': 'lovit (김현중)'}
 ```
 
-## Run server with specific ip and port
+## Run server with specific IP and port
 
 `app.py`
 
@@ -291,6 +291,13 @@ Flask practice
    Use a production WSGI server instead.
  * Debug mode: off
  * Running on http://127.0.0.1:5050/ (Press CTRL+C to quit)
+```
+
+Localhost 로 실행할 때는 `run(host=None)` 혹은 `run(host='0.0.0.0')` 으로 실행합니다.
+할당된 고정 IP, 'abc.def.ghi.jkh' 로 실행할 때는 `run(host='abc.def.ghi.jkh')` 혹은 `run(host='0.0.0.0')` 으로 실행합니다.
+
+```
+$ python app.py --host 0.0.0.0 --port 5050
 ```
 
 ## More
